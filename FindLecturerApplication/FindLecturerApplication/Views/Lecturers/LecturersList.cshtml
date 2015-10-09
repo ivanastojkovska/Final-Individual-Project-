@@ -1,0 +1,57 @@
+﻿@model IEnumerable<FindLecturerApplication.Models.Lecturer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FormalEducation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfesionalExperience)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Skills)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserImage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BirthDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FormalEducation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfesionalExperience)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Skills)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserImage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VideoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VideoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VideoID })
+        </td>
+    </tr>
+}
+
+</table>

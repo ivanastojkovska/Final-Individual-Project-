@@ -1,0 +1,58 @@
+﻿@model FindLecturerApplication.Models.UserProfile
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UserProfile</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FormalEducation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormalEducation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfesionalExperience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfesionalExperience)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Skills)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Skills)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserImage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProfileID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

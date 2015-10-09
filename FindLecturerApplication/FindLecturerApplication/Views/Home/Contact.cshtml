@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+
+
+<!-- Contact start -->
+<section id="contact" class="pfblock">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="pfblock-header">
+                    <h2 class="pfblock-title">Drop me a line</h2>
+                    <div class="pfblock-line"></div>
+                    <div class="pfblock-subtitle">
+                        No one lights a lamp in order to hide it behind the door: the purpose of light is to create more light, to open people’s eyes, to reveal the marvels around.
+                    </div>
+                </div>
+            </div>
+        </div><!-- .row -->
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <form id="contact-form" role="form">
+                    <div class="ajax-hidden">
+                        <div class="form-group wow fadeInUp">
+                            <label class="sr-only" for="c_name">Name</label>
+                            <input type="text" id="c_name" class="form-control" name="c_name" placeholder="Name">
+                        </div>
+                        <div class="form-group wow fadeInUp" data-wow-delay=".1s">
+                            <label class="sr-only" for="c_email">Email</label>
+                            <input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail">
+                        </div>
+                        <div class="form-group wow fadeInUp" data-wow-delay=".2s">
+                            <textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s">Send Message</button>
+                    </div>
+                    <div class="ajax-response"></div>
+                </form>
+            </div>
+        </div><!-- .row -->
+    </div><!-- .container -->
+</section>
+<!-- Contact end -->
+
+
+
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+
+<div class="contact-page">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-sm-5 map-wrapper">
+
+                <div class="contact-infos" style="font-size: 1.5em;">
+                    <ul>
+                        <li><b>Адреса</b></li>
+                        <li>Ул.Мито Хаџивасилев Јасмин бб</li>
+                        <li><b>Контакт телефони:</b></li>
+                        <li>+389 (2) 32 31 446</li>
+                        <li>+389 (2) 32 31 556</li>
+                        <li>+389 (2) 32 16 836</li>
+                        <li>+389 75 33 07 99</li>
+                        <li>+389 75 24 23 05</li>
+                        <li><b>Fax:</b></li>
+                        <li>+389 (2) 32 98 344</li>
+                        <li><b>Email:</b></li>
+                        <li><a href="mailto:info@pilottravel.com.mk">info@pilottravel.com.mk</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-7 col-sm-7">
+                <h2 class="h4" style="color:red;">@ViewBag.Message</h2>
+                <h3 class="widget-title">Контактирајте не </h3>
+                <div class="contact-form">
+                    <form name="contactform" id="contactform" action="#" method="post">
+                        <p>
+                            <input name="Name" type="text" id="name" placeholder="Име" required>
+                        </p>
+                        <p>
+                            <input name="Email" type="email" id="email" placeholder="Email" required>
+                        </p>
+                        <p>
+                            <input name="Title" type="text" id="subject" placeholder="Наслов" required>
+                        </p>
+                        <p>
+                            <textarea name="Message" id="message" placeholder="Порака" required></textarea>
+                        </p>
+                        <input type="submit" class="mainBtn" id="submit" value="Испрати">
+
+                    </form>
+                </div> <!-- /.contact-form -->
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+﻿@model FindLecturerApplication.Models.Lecturer
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Lecturer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FormalEducation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormalEducation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfesionalExperience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfesionalExperience)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Skills)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Skills)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserImage)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
